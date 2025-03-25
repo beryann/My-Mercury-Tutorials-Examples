@@ -1,0 +1,5 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+set tempo 70 
+new sample pluck_a time(1/8) timediv([1 3 1 3 1 1 1 3 1 3 3 3]) 
