@@ -1,0 +1,13 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 101: Sample ===
+// You can now prelisten the sounds or add your own sample(s) 
+
+new sample kick_909
+new sample chimes_chord time(1 1/2) shape(100 1000)
+//time and shape in other tutorials
+new sample wood_plate time(1 1/4)
+new sample piano_f time(1 1/8)
+new sample tabla_mid time(1)
+new sample harp_f4 time(1/2)
