@@ -2,7 +2,7 @@
 //https://linktr.ee/beryann.parker
 
 // === TUTORIAL 107: Beat ===
-set tempo 60 
+set tempo 60 //try 92 110 200
 
 //A house kick 
 list housy [1 0 1 0 0 1 0]
