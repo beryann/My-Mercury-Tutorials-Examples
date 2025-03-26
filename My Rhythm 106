@@ -1,0 +1,14 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 106: Rhythm ===
+
+//My pianos: a chord 7 (a/e/g)
+list myPiano [1 0 1 0 0 1 0 1]
+new sample piano_a time(1/8) play(myPiano)
+list myPiano2 [0 1 1 0 1 0 0 1]
+new sample piano_e time(1/8) play(myPiano2)
+list myPiano2 [1 1 1 0 1 0 0 1]
+new sample piano_g time(1/8) play(myPiano2)
+
+set all gain(0.6) shape(1 100 10) fx(double) //gain, shape and fx(double) in an other tutorial 
