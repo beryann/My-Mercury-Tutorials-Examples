@@ -1,0 +1,14 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 105: Offset ===
+
+set tempo 1000 
+
+new sample kalimba_g time(4)
+new sample kalimba_a time(4 3/8)
+new sample kalimba_e time(4 3/4)
+new sample kalimba_cis time(8 1)
+new sample kalimba_ab time(2 1)
+
+set all fx(reverb 0.5 10) play(0.6) fx(delay 1 2 0.6)
