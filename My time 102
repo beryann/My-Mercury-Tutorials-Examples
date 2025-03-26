@@ -1,0 +1,10 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 102: Time ===
+
+new sample kick_909 time(1/4) pan(-1) //Pan in an other tutorial 
+new sample kick_909 time(1/8) pan(1)
+new sample snare_909_short time(3/8)
+new sample hat_909_short time(1/16)
+new sample wobble_02 time(2/32)
