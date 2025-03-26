@@ -1,0 +1,17 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 107: Beat ===
+set tempo 60 
+
+//A house kick 
+list housy [1 0 1 0 0 1 0]
+new sample kick_house time(1/16) play(housy) fx(delay 1/8 2/8 0.7) pan(0.8)
+
+//A disty kick 
+list disty [0 1 0 1 1 0 1]
+new sample kick_808_dist time(1/16) play(disty) fx(filter) pan(-0.8) //Pan and fx(delay) in an other tutorial
+
+//A snary snare 
+list snary [0 1 0]
+new sample hat_909_short time(1/32) play(disty) 
