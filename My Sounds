@@ -1,0 +1,13 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 103: Sounds ===
+
+new sample block time(3/8)
+new sample block_lo time(1/4)
+new sample wood_metal time(1)
+new sample maracas_808 time(1/8)
+new sample violin_a time (1/2) 
+new sample clap_808 time(1/16) gain(0.5) //Gain in an other tutorial 
+new sample bell_c4 time(4)
+new sample chimes_hi time(5) gain(1.2) pan([-1 1]) //Pan in an other tutorial
