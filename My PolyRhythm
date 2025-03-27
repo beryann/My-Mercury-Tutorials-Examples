@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 110: Polyrhythm ===
+
+//4 glocks in the air
+new sample glock_c5 time(1) 
+new sample glock_g4 time(5/12)
+new sample glock_c6 time(1/2)
+new sample glock_g5 time(2/4) note(g3)
+
+//4 others glocks in the air 
+new sample glock_c5 time(1) note(c3)
+new sample glock_g4 time(2/6) note(g2)
+new sample glock_c6 time(1/2) 
+new sample glock_g5 time(2/1) note(g3)
