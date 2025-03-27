@@ -2,7 +2,9 @@
 //https://linktr.ee/beryann.parker
 
 // === TUTORIAL 108: Linear ===
-//My example 
+ set tempo 110
+ 
+//Samples linear lists
 new sample [kick_909 hat_909 snare_909 hat_909] time(1/8) name(kicky)
 set kicky fx(delay 1/8 1/16 0.4) 
 new sample hat_click time(1/16) shape(10 5) name(haty) play(0.8)
@@ -10,5 +12,6 @@ set haty pan(random)
 new sample [tabla_hi_long tabla_hi_short tabla_lo_long tabla_lo_short] time(1/4) play(0.4) gain(0.6) name(tably)
 set tably fx(reverb)
 
+//A melody
 list pis pisano(23)
 new synth [saw sine triangle square] note(pis 0) time(1) fx(filter) fx(delay 1/4 1/8 0.6)
