@@ -1,0 +1,17 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 109: Linear Beat ===
+
+set tempo 30
+
+//A list of strange linear sounds with their beat list
+list sounds [harp_a2 harp_a4 harp_c3 harp_c5 harp_g3 wobble_02 door scrape_01]
+list beat [1 0 1 0 1 1 0 1 1 1 0]
+new sample sounds time(1/16) play(beat) shape(100 1000 500) //shape in an other tutorial 
+set all fx(squash 4.5) fx(degrade 0.50) fx(triggerFilter) /Fxs degrade and triggerfilter in an other tutorial 
+
+new sample choir_o time(off) gain(0.5) note(d4) //Note(d4) to harmonize the global patch
+ 
+//A loud basic kick! 
+new sample kick_909 time(1/4) fx(reverb 0.5 7) gain(1.5)
