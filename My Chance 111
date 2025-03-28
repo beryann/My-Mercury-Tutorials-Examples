@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 111: Chance ===
+
+set tempo 115
+
+//A C chord 
+new sample xylo_c4 time(1/16) play(0.6) 
+new sample xylo_g4 time(1/16) play(0.5) 
+new sample xylo_g5 time(1/16) play(0.4) 
+new sample flute_e3 time(1/8) play(0.3) shape(100 500 100)
+new sample rhodes_8bit time(1/8) play(0.2) shape(10 500 10)
+
+//Just a kick....sometimes....
+new sample kick_909_long play(0.5) gain(1.5) fx(double)
