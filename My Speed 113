@@ -1,0 +1,21 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 113: Speed ===
+
+
+set tempo 60
+
+//A chaotic trio, a kind of Webern dodecaphonic ambiance :-()
+//2nd movement of an imaginary trio: Lento ma non troppo
+
+list pitch [0.180  2  3.271 3.825 -2.1]
+new sample clarinet_a2 time(1/2) speed(pitch) pan(-1) 
+
+list pitch2 [0.197  2  2.888 9.804 -2.1]
+new sample flute_a3 time(1/8) speed(pitch) pan(1)
+
+list pitch3 [0.215  -2  3.194 8.430 -1.5 3.5 -0.83]
+new sample violin_a time(1/16) speed(pitch3)
+
+set all play(0.1) fx(reverb 0.6 10)
