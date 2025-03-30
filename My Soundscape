@@ -1,0 +1,15 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 114: Soundscape ===
+
+set tempo 99
+
+//Press CRTL+R to randomize each speed() and each FX parameters 
+new sample chimes_chord_02 time(6) speed(0.209)
+new sample chimes_chord_01 speed(0.172)
+new sample chimes time(4) speed(0.333)
+new sample chimes_hi time(4) speed(0.280)
+new sample chimes_l time(6) speed(0.339)
+
+set all fx(degrade 0.336) fx(reverb 0.554 6) fx(delay 1/8 2/8 0.5)
