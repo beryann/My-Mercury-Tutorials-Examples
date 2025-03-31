@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 203: Note ===
+
+set tempo 120
+ //A  Pisano melody
+list pis pisano(13)
+
+//A chord 
+new synth sine note(pis 4)  time(1/4) gain(3)
+new synth saw  note([2 4 7] 2)
+new synth saw  note(0 0)
+
+//FXs
+set all fx(reverb 0.5 5) fx(filter low 2000) fx(distort) fx(filter low 300)
