@@ -1,7 +1,7 @@
 // By Beryann Parker 
 //https://linktr.ee/beryann.parker
 
-
+set tempo 99 
 // === TUTORIAL 115: Shape ===
 
 new sample chimes_chord_01 time(1/2) shape(10 250 50)
