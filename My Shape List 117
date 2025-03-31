@@ -1,0 +1,12 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+set tempo 117
+// === TUTORIAL 116: Shape List ===
+
+//2 arrays: fadeIn fadeOut 
+list fadeIn [2 20 277 50]
+list fadeOut [346 21 109 1 1242]
+new sample [amen_break snare_hvy] time(1/8) shape(fadeIn fadeOut)
+
+new sample kick_909_dist_long time(1/2) fx(reverb 0.6 5)
