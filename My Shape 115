@@ -1,0 +1,15 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+
+// === TUTORIAL 115: Shape ===
+
+new sample chimes_chord_01 time(1/2) shape(10 250 50)
+new sample rhodes_8bit time(1) shape(500 10 1000) speed(0.8)
+new sample choir_o time(1) shape(2 100 2000) speed(2.1) pan(random)
+
+//A violin
+new sample violin_g time(off)
+
+//A kick 
+new sample [kick_house snare_hvy] time(1/2)  gain(1.2)
