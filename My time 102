@@ -8,3 +8,26 @@ new sample kick_909 time(1/8) pan(1)
 new sample snare_909_short time(3/8)
 new sample hat_909_short time(1/16)
 new sample wobble_02 time(2/32)
+
+###################################################
+##Example 2##
+
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// A Mercury ritual
+
+set tempo 83
+
+new sample glock_c6 time(7) speed(0.25)
+new sample glock_c6 time(7) fx(shift 12 1 best)
+
+new sample glock_c6 time(1/8) 
+new sample glock_c6 time(1/8)  fx(shift 8 1 best)
+new sample glock_c6 time(1/8 1/16) fx(shift 3 1 best) play(0.3)
+new sample glock_c6 time(1/4)  speed(0.25) play(0.1)
+
+set all fx(reverb 0.5 3) pan(random) fx(delay)
+
+new sample kick_909 time(1) fx(shift -12 1 best) gain(2) fx(reverb 0.5 3)
+new sample tom_lo time(1 1/8) fx(shift -12 1 best) gain(2) fx(reverb 0.5 3) 
