@@ -14,3 +14,18 @@ new sample rhodes_8bit time(1/8) play(0.2) shape(10 500 10)
 
 //Just a kick....sometimes....
 new sample kick_909_long play(0.5) gain(1.5) fx(double)
+
+###########################################################################
+##Example 2 ##
+ // With chance() and with speed() also! 
+set tempo 115
+
+new sample tom_808 time(1/16) play(0.6)
+new sample tom_808 time(1/16 1/16) play(0.6) speed(1.5)
+new sample tom_808 time(1/16 1/8) play(0.3) speed(2)
+new sample tom_808 time(1/4) play(0.4) speed(0.25) gain(2.5) fx(double)
+new sample tom_808 time(1/32) speed(8) play(0.2) pan(random) gain(1)
+new sample tom_808 time(1/2) speed(1.2) play(0.9) gain(1)
+new sample tom_808 time(1/2) speed(1.8) play(0.9) gain(1)
+
+set all fx(reverb 0.4 6)
