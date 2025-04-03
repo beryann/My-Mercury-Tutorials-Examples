@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 120 and 121 : Volume  and Volume List ===
+
+set tempo 126
+//Volumes/Gains
+new sample [kick_house snare_hvy] time(1/2) gain(0.6)
+new sample hat_click time(1/8) gain(0.7)
+new sample clap_nord time(1/4) gain(0.5)
+
+
+//Volumes list
+list gains [0.105 0.386 0.869 0.370 0.136 0.936 0.664 0.098]
+list bambs [bamboo_a bamboo_c bamboo_f bamboo_g]
+new sample bambs time(1/8) gain(gains)
