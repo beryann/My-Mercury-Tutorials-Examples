@@ -1,0 +1,19 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 122: Humanize ===
+
+set tempo 110
+
+//"Humanized" bells 
+new sample piano_a time(1/2)  human(3000) pan(random)
+new sample piano_b time(1/2) human(1200) pan(random)
+new sample piano_c time(1/2) human(570)  pan(random)
+new sample piano_d time(1/2) human(245)  pan(random)
+new sample piano_e time(1/2) human(689)  pan(random)
+new sample piano_f time(1/2) human(1568) pan(random)
+new sample piano_g time(1/2) human(2879) pan(random)
+
+set all fx(reverb 0.6 8) fx(filter high 800 0.5)
+
+new sample bell_c4 time(1/2) 
