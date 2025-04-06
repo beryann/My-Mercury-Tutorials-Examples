@@ -1,7 +1,7 @@
 // By Beryann Parker 
 //https://linktr.ee/beryann.parker
 
-// === TUTORIAL 122: Humanize ===
+// === TUTORIAL 123: Humanize ===
 
 set tempo 110
 
@@ -16,4 +16,4 @@ new sample piano_g time(1/2) human(2879) pan(random)
 
 set all fx(reverb 0.6 8) fx(filter high 800 0.5)
 
-new sample bell_c4 time(1/2) 
+new sample bell_c4 time(1/2) gain(0.7)
