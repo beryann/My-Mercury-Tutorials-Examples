@@ -1,0 +1,15 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 124: Note & Tune ===
+
+set tempo 100 
+
+//A scale
+set scale major_pentatonic eb
+
+//Notes ans tunes 
+new sample kalimba_a time(1/8) note([0 7 5 3] 2) tune(a3)
+new sample piano_e time(1/16) note([0 7 5 3] 1) tune(e3) speed(1.5)
+new sample box_d5 time(1/4) note([0 7 5 3] 1) tune(d5) speed(-1.5)
+new sample xylo_c4 time(1/2) note(reverse([0 7 4 2] 1)) speed(0.5) gain(1.2)
