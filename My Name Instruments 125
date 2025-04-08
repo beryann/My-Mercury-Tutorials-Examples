@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 125: Name Instruments ===
+
+//A tempo 
+set tempo 110
+
+//3 samples choir_o time
+new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) name(ch)
+new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) speed(1.5) play(0.3) gain(0.8) name(choir1)
+new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) speed(0.5) play(0.2) gain(1.1) name(choir2)
+set ch fx(degrade 0.4) fx(double) 
+set choir1 fx(filter low 900 0.6)
+set choir2 fx(filter high 1200 0.6)
+set all play(0.4) fx(double)
+
+//A beat 
+new sample [kick_909 snare_909] time(1/4)
+new sample hat_909_short time(1/8)
