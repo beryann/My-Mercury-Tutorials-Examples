@@ -1,0 +1,17 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 202: Synth Time ===
+set tempo 120
+
+list  timer [ 1 1/2 2 1/4 1/8]
+
+// Shifted synths with time()
+
+new synth saw time(timer)
+new synth saw time(choose(timer)) fx(shift 7) 
+new synth saw time(reverse(timer)) fx(shift 10) gain(0.791) 
+new synth saw time(1/4 1/1) fx(shift 8) name(shifty)
+new synth saw time(1/16) fx(shift 19) play(0.448)
+set shifty pan(random)
+set all fx(double)
