@@ -1,0 +1,22 @@
+// By Beryann Parker 
+//https://linktr.ee/beryann.parker
+
+// === TUTORIAL 201: Synth ===
+
+set temp 120
+
+//A beat
+new sample [kick_deep snare_step] time(1/2)
+
+//4 synths
+new synth [saw sine triangle square] time(1/4) gain(1.4)
+
+//A kind of melody
+new synth saw note([0 7 11 12]) time(1/8) gain(0.6)
+
+//An other one
+list sp spread(12 0 24)
+new synth triangle note(sp) time(1/16) gain(0.9) fx(degrade 0.6)
+
+//A E3...sometimes
+new synth square note(4 3) time(1/16) play(0.4) gain(0.6) pan(random)
