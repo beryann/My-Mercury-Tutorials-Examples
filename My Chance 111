@@ -13,7 +13,7 @@ new sample flute_e3 time(1/8) play(0.3) shape(100 500 100)
 new sample rhodes_8bit time(1/8) play(0.2) shape(10 500 10)
 
 //Just a kick....sometimes....
-new sample kick_909_long play(0.5) gain(1.5) fx(double)
+new sample kick_909_long gain(1.5) fx(double)
 
 ###########################################################################
 ##Example 2 ##
