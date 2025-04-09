@@ -15,6 +15,7 @@ new synth saw  note(0 0)
 //FXs
 set all fx(reverb 0.5 5) fx(filter low 2000) fx(distort) fx(filter low 300)
 
+###############################################################################
 //Example 2 
 
 set scale major
