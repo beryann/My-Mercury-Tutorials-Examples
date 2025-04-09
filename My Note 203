@@ -14,3 +14,22 @@ new synth saw  note(0 0)
 
 //FXs
 set all fx(reverb 0.5 5) fx(filter low 2000) fx(distort) fx(filter low 300)
+
+//Example 2 
+
+set scale major
+set tempo 110 
+
+//in the casino on several machines with different synths
+new synth square time(1) note(0 2) play(0.6)
+new synth sine time(1/8) note([3 1] 3) play(0.4)
+new synth saw time(1 2/8) note(7)
+
+//A spread list 
+list sp spread(7 -7 12)
+new synth triangle time(1/32) note(sp 2) play(0.2)
+
+//Just a triangle  
+new synth triangle time(1/8) note(12 2) gain(0.6)
+
+set all fx(double) pan(random)
