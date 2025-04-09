@@ -1,0 +1,17 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 204: Melody ===
+
+//Tempo and scale in major
+set tempo 90
+set scale major
+
+//3 melodies which are made of this: 
+list mel pisano(15) 
+new synth saw time(1/16 1/8) note(mel 2) fx(filter)  play(0.6)
+new sample piano_c time(1/16 1/4) note(mel 3) play(0.5)
+new sample violin_c time(1/16 1/16) note(mel 4) play(0.6)
+
+//A delay by default 
+set all fx(delay)
