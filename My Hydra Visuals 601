@@ -1,0 +1,25 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 601: Hydra Visuals ===
+
+//A tempo and a major scale 
+set tempo 115
+set scale major
+
+//A hydra list with 2 visuals
+list hydras ['osc(100).kaleid(5).colorama(20).saturate(20).hue(0.6).scrollY(0,0.1).mult(shape(4)).scale(()=>Math.sin(time)*3).invert().out()' 'gradient(5).pixelate(10).out()']
+
+//A beat and a piano and a violin 
+new sample [kick_909_dist_long snare_808] time(1/2) visual(hydras)
+list pia pisano(15)
+new sample piano_a note(pia 2) time(1/8) 
+new sample violin_a note(pia 1) time(1/4) 
+set all fx(delay)
+
+//A clap and a pluck and a kalimba 
+new sample clap_808 play([1 0 0 0 1 1 0 1]) time(1/8) 
+new sample pluck_a note(pia 3) time(1/16) play(0.4)
+new sample kalimba_a time(1/16) play(0.7)
+
+set all fx(reverb 0.5 5)
