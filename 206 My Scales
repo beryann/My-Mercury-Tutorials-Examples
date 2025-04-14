@@ -1,0 +1,19 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 206: Scales ===
+
+set tempo 115
+set scale major
+
+//This melody in a major scale with some notes heard twice 
+list melody1 [0 1 2 3 4 5 6 7 8 9 10 11 12]
+new synth saw time(1/8) note(melody1 2)
+
+//This version is without repetitions 
+
+list melody2 [0 3 4 6 8 9 11 12]
+new synth saw time(1/8) note(melody2 2)
+
+//Melody1 with notes heard twice here very cool for a line of bass!
+new synth saw time(1/8) note(melody1 0) shape(100 1000) play(0.5)
