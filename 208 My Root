@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 208: Root ===
+
+set tempo 97
+
+//A minore scale with a C root 
+set scale minor_pentatonic c
+
+//A melody in C 
+list melody random(12 -24 24)
+new synth square time(1/2) note(melody 2)
+
+//An offbeat melody at the higher fifth 
+new synth square time(1/2 1/4) note(melody 2) fx(shift 7) shape(100 100)
+
+//A melody with the third and the octave
+list melody2 [3 12]
+new synth saw time(1/16) note(melody2 2) gain(0.4) fx(double)
