@@ -1,0 +1,29 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 207: More Scales ===
+
+list scales scaleNames()
+print scales
+
+//A bebop scale
+//try with prometheus,mystery_1,bebop etc 
+set tempo 143
+set scale ritusen
+
+//3 lists  and 3 melodies 
+list notes [12 11 10 9 8 7 6 5 4 3 2 1 0]
+list melody choose(16 notes)
+
+list notes random(5 -12 12)
+list melody2 choose(16 notes)
+
+list notes random(5 -12 0)
+list melody3 choose(5 notes)
+
+//3 synths 
+new synth square time(1/16) note(melody 2) pan(random) play(0.5)
+new synth triangle time(1/4) note(melody2 0) gain(2)
+new synth saw time(1/2) note(melody3 -0) gain(1.5)
+
+set all fx(double)
