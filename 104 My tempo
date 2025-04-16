@@ -8,7 +8,7 @@ set tempo 2000
 
 //A crazy piano
 new sample hat_min  time(8)
-new sample piano_a note([c0 c1 c2 c3]) time(2) play(0.5) //Play in an other tutorial 
+new sample piano_a note([c0 c1 c2 c3]) time(2) play(0.5) //Play function in an other tutorial 
 
 //A crazy melody 
 list mel pisano(50)
