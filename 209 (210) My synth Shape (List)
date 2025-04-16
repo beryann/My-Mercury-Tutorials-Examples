@@ -1,0 +1,18 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL  209 synth shape and 210: Synth Shape List ===
+set scale major d
+
+//List of shapes for a chord in d 
+list out reverse([20 20 100 20 200 500])
+list in [20 20 100 20 200 500]
+new synth saw time(1/8) shape(in out)
+new synth saw time(1/8) shape(in out) fx(shift 15) 
+new synth saw time(1/8) shape(in out) fx(shift 17)
+
+//A melody with a shaped synth 
+list notes pisano(36)
+new synth square note(notes 3) time(1/16) shape(10 500 40) fx(filter)
+
+set all fx(reverb 0.4 5)
