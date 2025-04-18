@@ -7,10 +7,10 @@ set temp 139
 
 //2 synths with filters 
 list rnd random(50 200 16000)
-new synth saw time(1/16) fx(filter low rnd 0.9) shape(1 100)
+new synth saw time(1/16) fx(filter low rnd 0.9) shape(1 100) pan(-1)
 
 list rnd2 random(50 200 16000)
-new synth saw time(1/16 1/16) fx(filter high rnd2 0.9) shape(1 100)
+new synth saw time(1/16 1/16) fx(filter high rnd2 0.9) shape(1 100) pan(1)
 
 //A beat 
 new sample hat_click time(1/8) 
