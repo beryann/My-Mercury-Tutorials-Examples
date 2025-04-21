@@ -1,0 +1,22 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 213: Filter Modulation ===
+
+set scale minor c 
+
+Cutoff and resonance(qs) lists 
+list cut spread(10 100 2000)
+list cutoffs choose(10 cut)
+list qs randomF(12 0.1 0.99) 
+
+print cutoffs qs
+
+//2 pisano melodies with modulation filters 
+list pis pisano(24) 
+new synth saw time(1/8) fx(filter high cutoffs qs) shape(10 800 10) note(pis 2)
+
+list qs2 reverse(qs)
+new synth saw time(1/8) fx(filter low cutoffs qs2) shape(1 500 10) note(pis 0) play(0.4)
+
+set all gain(0.5) fx(delay 0.2 0.4 0.6) fx(degrade 0.4) fx(double)
