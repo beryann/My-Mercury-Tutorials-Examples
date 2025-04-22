@@ -8,7 +8,7 @@ set scale major d
 
 list nts pisano(24)
 
-//2 different synths in the same time with filter modulations 
+//2 different synths at the same time with filter modulations 
 new synth sine time(1) note(nts) shape(off) fx(filter high 1/1 2000 6000 0.9) gain(2)
 new synth square time(1) note(nts) shape(off) fx(filter low 1/1 100 4000 1) gain(0.5) fx(filter)
 
