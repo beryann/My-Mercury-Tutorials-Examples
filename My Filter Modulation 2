@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 213: Filter Modulation 2 ===
+
+set temp 110 
+set scale major d
+
+list nts pisano(24)
+
+//2 different synths in the same time with filter modulations 
+new synth sine time(1) note(nts) shape(off) fx(filter high 1/1 2000 6000 0.9) gain(2)
+new synth square time(1) note(nts) shape(off) fx(filter low 1/1 100 4000 1) gain(0.5) fx(filter)
+
+//A melody with a filter modulation 
+new synth saw time(1/16) note(nts 1) fx(filter high 1/16 200 800 0.6 0.2) gain(0.9) play(0.4)
