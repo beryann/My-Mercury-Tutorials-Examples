@@ -1,0 +1,21 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 214: Note Slide ===
+
+set tempo 120
+
+//E major 
+set scale major e 
+
+//2 synths with a slide 
+list mel spread(24) 
+new synth saw note(mel 2) shape(10 250) time(1/16) slide(1/16) play(0.6)
+
+new synth saw note(mel -1) shape(2 150) time(1/4) slide(1/16) play(0.5) gain(1.4) fx(filter)
+
+//And a E major chord 
+list chord [ [0 4 7 12] ]
+new polySynth sine note(chord 2) time(1/2) shape(1 1/4) 
+
+set all fx(reverb 0.5 6)
