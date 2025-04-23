@@ -1,0 +1,23 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 220: polySynth ===
+
+set tempo 80
+set scale major c
+
+//Use crtl+r pour randomize all parameters 
+//3 lists for 3 chords
+list nts1 random(6 0 27) 
+list nts2 random(8 0 26)
+list nts3 random(7 0 23)
+
+// The 3 chords 
+list chords [ nts1  nts2 nts3 ]
+new polySynth sine note(chords 2) time(1/4) shape(1 1/8)
+
+//One chord 
+list chord2 [[0 4 6 8 13 15]]
+new polySynth sine note(chord2 1) time(1/2) shape(11 220) gain(1.2) fx(delay)
+
+set all fx(chorus)
