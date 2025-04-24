@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 221: Chord Progression ===
+
+set tempo 100
+set scale major c
+
+//A list of chords 
+list progression chordsFromNumerals([I VIm IV II V IIb])
+new polySynth sine note(progression 2) time(1/1) shape(10 500 10) fx(delay 0.3) gain(0.8)
+
+//A staccato melody 
+list nts random(12 0 24)
+new synth square note(nts 3) time(1/16) fx(double 2/1 30 0.5) fx(filter) play(0.3) gain(0.9)
+
+//A bass 
+new synth saw note(nts 0) time(1/4) fx(filter low 600 0.4) shape(off) play(0.3) gain(0.6)
+
+set all fx(reverb 0.4 4)
