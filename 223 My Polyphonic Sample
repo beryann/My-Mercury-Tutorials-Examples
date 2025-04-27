@@ -1,0 +1,23 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 223: Polyphonic Sample ===
+
+set tempo 110
+set scale minor c 
+
+//2 chords for a piano
+list chords chordsFromNumerals([I V])
+ new polySample piano_g note(chords 2) time(1) shape(10 250 10) gain(1.2) pan(random) fx(double)
+
+//A pisano list 
+list pis pisano(24) 
+print pis
+
+//4 pisano melodies 
+new polySample bamboo_g note(pis 2) time(1/2) shape(off) 
+new polySample piano_g note(pis 1) time(1/6) shape(off) 
+new polySample pluck_g note(pis 1) time(1) shape(off) 
+new polySample violin_g note(pis 2) time(1/12) shape(off)  gain(0.7)
+
+set all fx(delay) 
