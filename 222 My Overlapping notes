@@ -1,0 +1,19 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 222: Overlapping Notes ===
+
+set tempo 110
+set scale none
+
+// A chord progression
+list progression repeat(chordsFromNumerals([I IV V VIm]) 4)
+print progression
+
+//A melody that follows the chord progression
+list progression2 flat(repeat(chordsFromNumerals([I IV V VIm]) 4))
+print progression2
+
+//The 2 synths for the chords and the melody
+new polySynth sine note(progression 2) time(1/12) shape(1 1/1) steal(off)
+new polySynth triangle note(progression2 2) time(1/12) shape(1 1/1) steal(off) //try out with steal(on) to hear the difference
