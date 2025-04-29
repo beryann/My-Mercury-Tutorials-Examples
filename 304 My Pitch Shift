@@ -1,0 +1,15 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 304: Pitch Shift ===
+
+set scale harmonic_minor c
+list sft spread(12 0 24)
+list sft2 choose(10 sft)
+
+//2 "shifted" pianos
+new sample piano_c time(1/4) fx(shift [0 12 7 5 3]) shape(10 500 10) pan(1)
+new sample piano_c time(1/4) fx(shift sft2 0.8 best) shape(10 500 10) pan(-1)
+new sample [kick_house snare_808] time(1/2) 
+
+print sft sft2
