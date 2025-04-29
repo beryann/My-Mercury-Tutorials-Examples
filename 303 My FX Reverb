@@ -1,0 +1,15 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 303: FX Reverb ===
+
+set temp 100
+
+//4 saws with different reberbs and offsets and a bass...but the same shape!
+new synth saw note(0 0) time(1) shape(1 1/4 1) fx(reverb 0.3 10)
+new synth saw note(7 0) time(1 1/16) shape(10 500 10) fx(reverb 0.5 10)
+new synth saw note(12 0) time(1 1/8) shape(10 500 10) fx(reverb 0.6 15)
+new synth saw note(15 0) time(1 1/4) shape(10 500 10) fx(reverb 0.9 20)
+new synth saw note(0 -1)  shape(off) fx(reverb 0.9 5)
+
+set all fx(double)
