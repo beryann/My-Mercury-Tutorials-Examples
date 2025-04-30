@@ -6,7 +6,7 @@ set scale minor d
 set tempo 115
 
 //A beat with 3 squashes 
-list squashes spread(10 1 50)
+list squashes spread(12 1 70)
 new sample kick_dub time(1/8) fx(squash squashes) shape(1 500)
 new sample snare_hvy time(1/8 1/16) fx(squash squashes) shape(1 50)
 new sample hat_808 time(1/16) fx(squash squashes) shape(1 50)
