@@ -13,6 +13,6 @@ new sample hat_808 time(1/16) fx(squash squashes) shape(1 50)
 
 //A pisano squashed melody
 list pis pisano(24)
-new synth sine note(pis 2) time(1/16) fx(squash squashes) gain(0.7) fx(reverb 0.5 4)
+new synth sine note(pis 2) time(1/16) fx(squash squashes) gain(0.7) super(2 0.2) fx(reverb 0.5 4)
 
 print squashes
