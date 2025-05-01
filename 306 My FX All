@@ -1,0 +1,18 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 306: FX All ===
+
+set tempo 100
+set scale major e
+
+//A list of chords with 2 polySynths
+list progression chordsFromNumerals([I VIm IV II V II])
+new polySynth sine note(progression 3) time(1/8)
+new polySynth sine note(progression 1) time(1/8)
+
+//set to eveything above 
+set all fx(squash 15) fx(reverb 0.5 4) fx(double) fx(delay) play(0.6)
+
+//And a beat 
+new sample [kick_808 snare_808] time(1/2)
