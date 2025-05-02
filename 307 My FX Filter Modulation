@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+
+// === TUTORIAL 307: FX Filter Modulation ===
+
+set scale major c
+
+//Adagio ma non troppo! 
+set tempo 50
+
+list nts pisano(24)
+
+//3 melodies with a beat
+new synth sine time(1/16) note(nts 2) gain(1)
+new synth saw time(1/2) note(nts 1) shape(10 2500 10)  fx(filter high 1/7 2000 8000 0.8  0.5) play(0.6) gain(1)
+new synth saw time(1/1) note(nts 0) shape(10 2500 10)  fx(filter low 1/16 100 1000 0.8  0.5) play(0.9) gain(0.6)
+new sample [kick_nord snare_ac] time(1/8) 
+
+set all fx(delay 0.5 )
