@@ -15,5 +15,8 @@ list nts pisano(20)
 new synth saw shape(10 500 10) time(1/8) fx(filter low  rnd rnd2 ) note(nts 0) fx(delay) fx(vowel 0 1/4) play(0.5)
 new synth sine shape(off) time(1/16) fx(filter low  rnd rnd2 ) note(nts 2) fx(delay) gain(0.6) fx(vowel 10 1/4) play(0.4) 
 
+//A compressor 
+set all fx(compress -80 2 5 50)
+
 //An amen loop 
-new loop amen gain(1.5)
+new loop amen gain(1.3)
