@@ -1,0 +1,23 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 307: FX Trigger Filter ===
+
+set tempo 50
+
+set scale minor b 
+
+//2 lists 
+list rnd random(12 0 24)
+list rnd2 choose(12 rnd)
+
+//3 melodies and a bass
+new synth square  time(1/1) shape(off) fx(triggerFilter low 1/8 1/1 5000 100)
+new synth saw time(1/2 1/8) shape(off) fx(triggerFilter low 1/8 1/5 5000 100) note(rnd 2)
+new synth saw  time(1/2 1/16) shape(off) fx(triggerFilter low 1/8 1/5 8000 500) note(rnd2 0)
+new synth saw time(1/16) note(rnd -1)  gain(1.1) fx(reverb 0.6 4)
+
+//A kick 
+new sample kick_808 time(1/4) gain(2) fx(double)
+
+print rnd rnd2
