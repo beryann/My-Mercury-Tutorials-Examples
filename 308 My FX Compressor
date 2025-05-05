@@ -1,0 +1,22 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 308: FX Compressor ===
+
+set tempo 60
+
+//List for the dBFS and the ratios
+list thresh spread(15 -1 -100)
+list thresh2 choose(15 thresh)
+list rat spread(10 1 20)
+
+//4 staggered choirs
+new loop choir_01 time(4) 
+new loop choir_02 time(4 1) 
+new loop choir_03 time(4 2) 
+new loop choir_o time(4 3) 
+
+//And different compressions 
+set all fx(compress thresh2 rat 5 5 )
+
+print thresh rat thresh2
