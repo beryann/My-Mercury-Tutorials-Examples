@@ -1,0 +1,21 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 310: FX Degrade ===
+
+set scale major c
+set tempo 80
+
+//2 lists, a piano and a violin
+list dgd spreadF(16 0.1 0.9)
+list sft random(16 1 24)
+new sample piano_c time(1/4) shape(off) note(sft 0)
+new sample violin_c time(1/8) note(sft 1) 
+
+//A beat. Cf. the 102 example "My Time"
+new sample kick_909 time(1/8) pan(1)
+new sample snare_909_short time(3/8)
+new sample hat_909_short time(1/16)
+
+//Degrade all sounds 
+set all fx(degrade dgd) fx(double)
