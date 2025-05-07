@@ -8,7 +8,7 @@ set tempo 150
 
 //2 synths with chorus and double
 new synth saw note(random(10 0 24) 1) time(1/4) shape(1 1/2) fx(chorus 8/1 100 0.5) play(0.5) slide(1/8) fx(vowel 0)
-new synth sine note(random(10 0 24) 1) time(1/8) fx(double) gain(1.1) play(0.5) fx(degrade) 
+new synth sine note(random(10 0 24) 1) time(1/8) fx(double) gain(1.1) play(0.6) fx(degrade) fx(human)
 
 //A bas with a delay
 new synth sine note(random(5 0 12) 0) time(1/1) gain(0.8) fx(delay) gain(2.5) 
