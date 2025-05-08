@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 404: Fill ===
+
+set tempo 100
+
+//Lists with fill and random
+list mel fill(0 1 )
+list mel1 fill(5 1 )
+list rnd random(100 0 24)
+
+print mel mel1 rnd
+
+//A melody with an ostinato
+new synth sine note(mel 2) time(1/16)
+new synth sine note(mel1 2) time(1/16 1/32)
+new synth sine note(rnd 2) time(1/16 1/64) gain(0.8)
+
+set all fx(delay)
