@@ -1,0 +1,25 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 401: Spread ===
+set tempo 100
+
+//Lists of spread()
+list mel spread(5 0 12)
+list vow spread(10)
+list oct spreadF(7 -2 2)
+list oct1 choose(7 oct)
+print mel vow oct oct1
+
+
+//A synth with vowels
+new synth saw note(mel oct1) time(1/4) shape(100 500 100) fx(chorus 5/1 30) fx(vowel vow) slide(1/8)
+
+//2 chords 
+list chrd chordsFromNumerals([I V])
+new polySynth sine note(chrd 2) time(1/1) shape(100 500 100) fx(filter)  
+
+set all fx(reverb 0.5 6)
+
+//A beat
+new loop house
