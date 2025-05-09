@@ -6,8 +6,8 @@
 set tempo 100
 
 //Lists with fill and random
-list mel fill(0 1 )
-list mel1 fill(5 1 )
+list mel fill([0 4 2 12] )
+list mel1 fill([5 4 12 10] )
 list rnd random(100 0 24)
 
 print mel mel1 rnd
