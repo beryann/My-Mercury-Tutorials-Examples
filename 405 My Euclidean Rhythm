@@ -1,4 +1,4 @@
-// By Beryann Parker 
+// By Beryann Parker ucli
 //linktr.ee/beryann.parker
 
 // === TUTORIAL 405: Euclidean Rhythm ===
@@ -11,13 +11,16 @@ list ryt2 euclid(10 6 2)
 list ryt3 euclid(250 67 3)
 list ryt4 euclid(1000 621 2)
 list ryt5 euclid(3 2 1)
+list vow spread(5 0 10)
 
 //Samples and a synth 
 new sample bell play(ryt1) time(1/8) fx(double)
 new sample tongue play(ryt2) time(1/4) speed(0.5)
 new sample metal play(ryt3) time(1/2) 
-new synth saw play(ryt4) time(1/16) shape(10 50 2) pan(random) fx(lfo)
+new synth saw play(ryt4) time(1/16) shape(10 100 2) pan(random) fx(lfo) fx(vowel vow)
 new sample hat_808 time(1/16) play(ryt5) gain(0.6) fx(delay) speed(1.5)
+
+print vow
 
 //A kick
 new sample kick_house time(1/4) gain(1.2)
