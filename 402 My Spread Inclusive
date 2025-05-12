@@ -1,0 +1,17 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 402: Spread Inclusive ===
+
+//Lists of spreadInclusive
+list mel spreadInclusive(12 0 24)
+list mel2 spreadInclusive(12 0 24)
+list mel3 reverse(mel2)
+
+//Notes with a triangle
+new synth triangle note(mel 2) time(1/32)
+new synth triangle note(mel3 2) time(1/32)
+print mel mel3 
+
+//A sort of siren...
+set all fx(double) 
