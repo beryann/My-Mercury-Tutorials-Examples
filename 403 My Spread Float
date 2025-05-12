@@ -1,0 +1,31 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 403: Spread Float ===
+
+set tempo 112 
+//In fa Major 
+set scale major f 
+
+//A seed 
+set randomSeed 10000
+
+//Spread lists ans a ranom list
+list vol spreadF(22 0 1.5)
+list vol2 choose(22 vol)
+
+list pan spreadInclusiveF(17 -1 1)
+list pan2 choose(17 pan)
+
+list nts random(36 0 22)
+list nts2 choose(36 nts)
+
+print vol vol2 pan pan2 nts nts2
+
+//2 saws
+new synth saw note(nts2 2) time(1/16) shape(10 80) pan(pan2) gain(vol) super(4 0.12) fx(filter) fx(reverb 0.4 5) 
+new synth saw note(nts2 0) time(1/16) shape(10 80) pan(pan2) gain(vol) super(4 0.12) fx(filter) fx(reverb 0.4 5) play(0.4) 
+
+//2 chords 
+list prog chordsFromNumerals([I VIm])
+new polySynth sine note(prog 2) time(1/1) shape(10 500 10) fx(delay 0.3) gain(0.8) pan(pan2)
