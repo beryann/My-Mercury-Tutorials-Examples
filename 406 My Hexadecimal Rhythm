@@ -1,0 +1,21 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 406: Hexadecimal Rhythm ===
+
+set tempo 130
+
+//3 hex lists
+list rhy1 hex('0af1')
+list rhy2 hex('a5b0')
+list rhy3 hex('cd22')
+print rhy1 rhy2 rhy3 
+
+//3 samples 
+new sample box_g5 time(1/16) play(rhy1)
+new sample bamboo_a time(1/16) play(rhy2)
+new sample metal time(1/16) play(rhy2)
+
+//A beat 
+new sample [kick_ua snare_step] time(1/4) 
+set all fx(chorus)
