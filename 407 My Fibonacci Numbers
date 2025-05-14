@@ -6,7 +6,7 @@
 set tempo 130 
 
 //2 fibonacci lists 
-list mel fibonacci(9)
+list mel fibonacci(10)
 list fib  fibonacci(8 10)
 print mel fib 
 
