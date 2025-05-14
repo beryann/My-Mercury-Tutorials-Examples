@@ -1,0 +1,17 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 407: Fibonacci Numbers ===
+
+set tempo 130 
+
+//2 fibonacci lists 
+list mel fibonacci(9)
+list fib  fibonacci(8 10)
+print mel fib 
+
+//2 shifted synths 
+new synth triangle note(mel 1) time(1/8) shape(fib fib) super(2 1.5) play(0.6) slide(1/16) pan(1)
+new synth triangle note(mel 1) time(1/8) shape(fib fib) super(2 1.5) play(0.6) slide(1/16) pan(-1)
+
+set all fx(chorus)
