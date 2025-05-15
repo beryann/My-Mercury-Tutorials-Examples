@@ -1,0 +1,22 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 408: Pisano Periods ===
+
+//Slow tempo but...
+set tempo 30
+
+//In d major
+set scale major d
+
+//A pisano list
+list mel pisano(14)
+
+print mel
+
+//a piano-violin-harp trio 
+new sample harp_d4 note(mel 2) time(1/4) gain(2)
+new sample piano_d note(mel 1) time(1/16)  gain(1.1) fx(double)
+new sample violin_d note(mel 2) time(1/64) human(10)
+
+set all fx(reverb 0.4 5)
