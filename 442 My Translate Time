@@ -1,0 +1,36 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 442: Translate Time ===
+
+set scale major e
+set tempo 60
+
+// Convert a chord progression from roman numerals to semitones
+
+print chordsFromNumerals([IV IIm7 V7 VIm9])
+
+// Convert a chord progression from chordnames to semitones
+print chordsFromNames([D Bm7 EM7 f#m9])
+
+list chords flatten(chordsFromNumerals(repeat([IV IIm7 V7 VIm9] 3)))
+print chords 
+
+//2 synths 
+new synth saw note(chords 1) time(1/16) slide(1/16) fx(filter)
+new synth triangle note(chords 1) time(1/16) play(0.6) super(3 4.72) gain(0.9)
+
+//With My  Beat Example 107
+
+list housy [1 0 1 0 0 1 0]
+new sample kick_house time(1/16) play(housy) fx(delay 1/8 2/8 0.7) pan(0.8)
+
+
+list disty [0 1 0 1 1 0 1]
+new sample kick_808_dist time(1/16) play(disty) fx(filter) pan(-0.8) 
+
+
+list snary [0 1 0]
+new sample hat_909_short time(1/32) play(disty) 
+
+set all fx(double)
