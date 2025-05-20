@@ -1,0 +1,28 @@
+// === TUTORIAL 410: Random/RandomF ===
+
+set scale major d
+set randomSeed 10000
+
+//Random lists 
+list mel random(12 0 24)
+list cuto random(10 0 5000)
+list res randomF(10 0 1)
+list sh randomF(10 0 12)
+
+print mel cuto res sh det 
+
+//A first synt 
+new synth saw note(mel 1) time(1/8) fx(filter low cuto res) name(synt1)
+
+//A another randomSeed for the synt2
+set randomSeed 234
+new synth saw note(mel 2) time(1/8) fx(filter low cuto res) name(synt2) 
+
+set synt1 fx(drive 5) fx(filter)
+set synt2 fx(double)
+
+//A kick and a hat 
+new sample kick_909 time(1/4) speed(0.9) fx(drive 5) gain(0.9) 
+new sample hat_808 time(1/4 1/8)
+
+set all  fx(delay) fx(reverb 0.4 5)
