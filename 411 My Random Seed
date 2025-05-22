@@ -1,0 +1,28 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 411: Random Seed ===
+
+set scale major c 
+
+//With randomSeed 3268, each time you evaluate the random values stay the same for mel2 and oct
+set randomSeed 3268
+
+list mel2 random(12 0 24)
+list oct random(5 -1 4)
+
+new synth square note(mel2 oct) time(1/16) shape(off) gain(0.4) fx(lfo)
+
+//With randomSeed 0, each time you evaluate the random values change for mel and rhyt 
+set randomSeed 0
+
+list mel random(10 -12 12)
+list rhyt random(16 0 2)
+
+new synth triangle note(mel 1) time(1/16) play(rhyt) fx(filter high 500) gain(1.3) super(2 1.01) fx(delay) 
+
+//A beat
+new sample kick_house play(rhyt) time(1/8)
+new sample hat_min time(1/16) gain (0.5)
+
+print mel rhyt mel2 oct 
