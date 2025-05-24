@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 412: Drunk ===
+
+set tempo 149
+set randomSeed 0 
+
+list mel drunk(24 4 0 36)
+list mel2 choose(24 mel)
+list oct drunk(4 3 -1 4)
+print mel oct mel2
+
+new synth saw note(mel oct) time(1/16) shape(off) fx(filter) slide(1/64)
+new synth sine note(mel2 oct) time(1/8) gain(0.9) fx(drive)
+new sample [kick_909_long snare_909_short] time(1/2) fx(reverb 0.5 3)
