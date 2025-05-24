@@ -1,0 +1,27 @@
+// === TUTORIAL 413: Clave ===
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+set tempo 130
+set randomSeed 0
+set scale major d 
+
+//Clave lists 
+list rh1 clave(8)
+list rh2 clave(8)
+list rh3 clave(8)
+list rh4 clave(8)
+list nts pisano(13)
+print rh1 rh2 rh3 rh4 
+
+//The rhythm section 
+new sample wood_nord_hi time(1/16) play(rh1)
+new sample wood_hit time(1/16) play(rh2) fx(lfo)
+new sample kick_vintage time(1/8) play(rh3) 
+new sample hat_min time(1/16) gain(0.8)
+new sample wobble time(1/4) shape(500 100) play(rh4)
+
+//A melody 
+new sample piano_d time(1/4) note(nts 1) fx(lfo) gain(1.1)
+
+set all fx(reverb 0.4 4)
