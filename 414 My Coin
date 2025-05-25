@@ -1,0 +1,23 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 414: Coin ===
+
+set tempo 130
+
+//Coin() lists 
+list cn0 coin(24)
+list cn1 coin(36)
+list cn2 coin(8)
+list cn3 coin(12)
+
+print cn0 cn1 cn2 cn3 
+
+//Instruments 
+new sample box_d6 time(1/16) play(cn0) 
+new sample box_d5 time(1/16) play(cn1) gain(0.6)
+new sample kalimba_g time(1/16) play(cn2)
+new sample piano_b time(1/1) play(cn3) fx(reverb 0.8 10) gain(1.1)
+
+//A simple kick 
+new sample kick_909 time(1/4) gain(1.1)
