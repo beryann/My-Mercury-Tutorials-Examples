@@ -4,10 +4,10 @@
 // === TUTORIAL 415: Choose ===
 
 set tempo 130
-set randomSeed 1
+set randomSeed 2
 
 //Choose lists 
-list mel choose(16 spread(12 -5 24))
+list mel choose(24 spread(12 -5 36))
 list beat0 choose(4 [kick_dub snare_rock kick_ua snare_909_short])
 list beat1 choose(4 [hat_808_half hat_nord_open hat_click hat_dub])
 
