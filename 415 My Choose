@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 415: Choose ===
+
+set tempo 130
+set randomSeed 1
+
+//Choose lists 
+list mel choose(16 spread(12 -5 24))
+list beat0 choose(4 [kick_dub snare_rock kick_ua snare_909_short])
+list beat1 choose(4 [hat_808_half hat_nord_open hat_click hat_dub])
+
+
+print mel beat0 beat1
+
+//A melody and a beat 
+new synth sine note(mel 1) time(1/16) gain(1.1) fx(reverb 0.6 6)
+new sample beat0 time(1/8)
+new sample beat1 time(1/8 1/16)
