@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 416: Shuffle ===
+
+set scale major c 
+set tempo 130
+
+//Shuffle lists  for melodies and a beat
+list mel shuffle(random(24 -12 24))
+list beat shuffle([kick_808 hat_808 snare_808 tabla_hi_short hat_min clap_909 drone_cymbal maracas_808 bell])
+print mel beat
+
+//Instruments and a beat 
+new synth sine note(mel 1) time(1/16) fx(filter low 3000) gain(1)
+new synth sine note(mel 2) time(1/8) pan(random) 
+new sample kick_808 time(1/4) gain(1.1) fx(distort)
+new sample beat time(1/8)
+
+set all fx(double)
