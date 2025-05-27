@@ -1,0 +1,18 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 420: Reverse ===
+
+set tempo 120
+set scale dorian
+
+//A reverse list 
+list mel  reverse(drunk(120 3 -5 24))
+
+//3 instruments for a unique timbre 
+new synth sine note(mel 2) time(1/16) fx(chorus)
+new sample xylo_c4 fx(shift mel) time(1/16)
+new synth square note(mel 0) time(1/16)
+
+
+print mel
