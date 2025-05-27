@@ -1,0 +1,20 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 421: Palindrome ===
+
+//Set scale and tempo 
+set scale major_pentatonic
+set tempo 98
+
+//A list with palindrome 
+list mel palin([0 4 7 9 12 15])
+
+//3 synths 
+new synth sine note(mel 0) time(1/16) 
+new synth sine note(mel 1) time(1/16 1/32) fx(delay)
+new synth sine note(mel 2) time(1/16 ) fx(delay)
+
+//A beat 
+new sample [kick_house snare_808]  time(1/4) fx(distort)
+new sample hat_min time(1/16) gain(0.8) play(0.6) pan(random)
