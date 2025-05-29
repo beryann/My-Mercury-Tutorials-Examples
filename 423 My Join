@@ -1,0 +1,37 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 423: Join ===
+
+set tempo 86 
+set scale major_pentatonic 
+
+// 3 chords
+list chord1 [[0 4 5 9 12 16]]
+list chord2 [[2 6  10 14 20]]
+list chord3 [[4 8  12 16 22]]
+
+//3 list of chords joined 
+list chords join(chord1 chord2 chord3)
+
+//A synth for these chords 
+new polySynth sine note(chords 2) time(1/2) shape(1 1/4) 
+
+//4 lists for a melody
+list nts1 spread(12 0 24)
+list nts2 drunk(12 3 -6 12)
+list nts3 random(12 -8 20)
+list nts4 pinky(nts1)
+list nts5 invert(nts3) 
+
+//These 4 lists joined to make 1 melody
+list joined join(nts1 nts2 nts3 nts4 nts5)
+print nts1 nts2 nts3 nts4 nts5 
+
+//A synth to play this melody
+new synth saw note(joined 0) time(1/16) fx(filter) gain(0.8)
+
+//A kick 
+new sample [kick_deep snare_hvy] time(1/4) 
+
+set all fx(double) fx(reverb 0.4 4)
