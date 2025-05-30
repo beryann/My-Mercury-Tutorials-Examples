@@ -1,0 +1,18 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 424: Repeat ===
+
+set scale major_pentatonic c 
+set tempo 86 
+
+//2 lists with repeat()
+list mel [0 3 7 12 9]
+list rep repeat(mel [10 5])
+print mel rep 
+
+//2 shifted synths with a global effect 
+new synth saw note(rep 1) time(1/32) pan(1)
+new synth saw note(rep 0) time(1/32 1/16) pan(-1) fx(vowel 0)
+
+set all fx(delay) 
