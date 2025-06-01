@@ -1,0 +1,24 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 425: Lace ===
+
+//Each time you click on play, the random values change
+set random seed 0
+
+//Set the scale 
+set scale major_pentatonic c
+
+//3 lists laced
+list mel0 random(24 -12 24) 
+list mel1 add(mel0 12)
+list mel2 drunk(12 3 -12 24)
+list laced lace(mel0 mel1 mel2)
+print mel0  mel1 mel2 laced
+
+//3 melodies 
+new synth saw note(laced 1) time(1/16) fx(filter)
+new synth saw note(laced 1) time(1/16 1/32) fx(delay 1/16 2/16 0.7)
+new synth saw note(laced 0) time(1/1)  gain(0.9)
+
+new sample kick_nord_long time(1/4) gain(2) 
