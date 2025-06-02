@@ -13,3 +13,23 @@ new sample wood_plate time(1 1/4)
 new sample piano_f time(1 1/8)
 new sample tabla_mid time(1)
 new sample harp_f4 time(1/2)
+
+#############################################
+2nd example with Hydra visuals 
+
+set tempo 90
+
+//Hydra 
+list hyd ['osc(100).colorama(2.5).hue(0.6).scrollY(0,0.1).mult(shape(4)).scale(()=>Math.sin(time)*3).out()' 'gradient(5).pixelate(10).out()']
+
+//Samples with a beat 
+new sample kick_808 time(1/16) play(0.6) fx(degrade) gain(1.4) visual(hyd) 
+new sample hat_909_short time(1/16) pan(random) gain(1.2)
+new sample piano_a time(1/16) play(0.1) fx(reverb 0.8 12) fx(lfo 1/8)
+new sample piano_c time(1/16) play(0.1) fx(shift 12) fx(reverb 0.8 12) fx(lfo 1/8)
+new sample piano_e time(1/16) play(0.1) fx(shift 12) fx(reverb 0.8 12) fx(lfo 1/8)
+
+//A house loop 
+new loop house gain(1.2)
+
+
