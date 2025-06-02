@@ -1,0 +1,16 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 426: Lookup ===
+
+//A list of sounds and a pattern
+list sounds [ scrape hat_808_half marimba_c2 oboe_d4 xylo_c6 noise_a]
+list pattern [6 6 0 2 5 4 4 3 0 2 2 6 5 4 3 2 1 0 5 5 0]
+list sons lookup(pattern sounds)
+print sounds
+
+new sample sons time(1/16) fx(delay)
+new sample [ kick_deep snare_fat] time(1/4)
+
+//Hydra code: Copy and paste it in the window below
+osc(10,0.5,1.5).modulate(src(o0), 0.8).out()
