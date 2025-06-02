@@ -6,7 +6,9 @@
 
 new sample kick_909
 new sample chimes_chord time(1 1/2) shape(100 1000)
+
 //time and shape in other tutorials
+
 new sample wood_plate time(1 1/4)
 new sample piano_f time(1 1/8)
 new sample tabla_mid time(1)
