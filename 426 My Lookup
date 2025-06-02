@@ -12,5 +12,5 @@ print sounds
 new sample sons time(1/16) fx(delay)
 new sample [ kick_deep snare_fat] time(1/4)
 
-//Hydra code: Copy and paste it in the window below
+//Hydra code: Copy and paste it in the window below!
 osc(10,0.5,1.5).modulate(src(o0), 0.8).out()
