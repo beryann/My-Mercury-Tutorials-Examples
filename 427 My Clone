@@ -1,0 +1,21 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 427: Clone ===
+
+set tempo 110
+set scale major b
+
+//Lists of notes 
+list notes drunk(24 3 -12 24)
+list mel clone(notes 0 2 4 6 8 10 12)
+list mel2 choose(48 mel)
+
+print notes mel
+
+//2 synths
+new synth sine note(mel 2) time(1/16) fx(degrade) fx(lfo 1/32) 
+new synth sine note(mel2 1) time(1/16) fx(degrade) fx(lfo 1/32) play(0.5) gain(1.2) 
+
+//A loop 
+new loop amen gain(1.2)
