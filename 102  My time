@@ -3,11 +3,15 @@
 
 // === TUTORIAL 102: Time ===
 
+set tempo 90 
+
 new sample kick_909 time(1/4) pan(-1) //Pan in an other tutorial 
 new sample kick_909 time(1/8) pan(1)
 new sample snare_909_short time(3/8)
 new sample hat_909_short time(1/16)
 new sample wobble_02 time(2/32)
+
+set all fx(delay 5/16 10/16 0.7 0.8)
 
 ###################################################
 ##Example 2##
