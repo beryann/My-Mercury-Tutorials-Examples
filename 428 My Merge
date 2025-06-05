@@ -1,0 +1,25 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 428: Merge ===
+
+//Each time you click on "play", the "drunk" values will change and the chord will also change
+set randomSeed 0
+set scale major c 
+
+//Hydra Video Synth 
+list hyd ['osc(20,0.5, 2.3).out()' 'shape(4).modulateScale(src(o0), 0.6).out()']
+
+// 3 lists of notes
+list row1 spread(6 0 12) 
+list row2 sine(6 1 0 24)
+list row3 drunk(6 3 12 36)
+
+// 6 chords with 3 notes 
+list chords merge(row1 row2 row3) 
+print row1 row2 row3 chords 
+
+new polySynth saw note(chords 1) time(1/4) shape(1/6 10) fx(delay 1/8 1/9 0.6 0.8) fx(lfo 1/4) fx(double)
+new sample kick_909 time(1/4) fx(distort) visual(hyd)
+
+set all fx(reverb 0.3 4)
