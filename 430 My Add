@@ -1,0 +1,30 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 430: Add Sub Mult Div ===
+
+set tempo 90 
+set scale major c 
+
+//A list of notes with 4 others lists and 4 lists derived from these with add, sub, mult and div
+list mel1 spread(24) 
+list mel2 add(mel1 3)
+list mel3 sub(mel1 5)
+list mel4 mul(mel1 2)
+list mel5 div(mel1 2)
+
+print mel1 mel2 mel3 mel4 
+
+//3 synths for a chord. With 'group()", I can specifically assign one or more effects to these 3 synths.
+new synth saw note(mel1 1) time(1/4) group(chd)
+new synth sine note(mel2 1) time(1/4 ) group(chd)
+new synth square note(mel3 1) time(1/4) group(chd) 
+
+//Now I can apply different effects to my 3 synths
+set chd play(0.4) slide(1/16) 
+
+//2 synths for 2 melodies 
+new synth triangle note(mel4) time(1/16) slide(1/32) pan(1)
+new synth saw note(mel5 1) time(1/16) pan(-1)
+
+set all fx(reverb 0.4 5)  
