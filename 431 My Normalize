@@ -1,0 +1,31 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 431: Normalize ===
+// normalize(list) - alias: norm()
+
+//Set the tempo, the gain and the scale
+set tempo 120
+set gain 0.5
+set scale dorian c 
+
+//A normalized list 
+list rnd randomF(12 0 36)
+list norm normalize(rnd)
+print rnd norm
+
+//These chords have been created by Timo Hoogland, creator of Mercury
+list chords repeat(split( random(12 0 24) 3) 4)
+new polySynth sine note(chords 2) time(1/4) shape(1 1/1) fx(chorus) gain(norm)
+print chords
+
+//4 synths for an interesting timbre 
+new synth sine note(norm 3) shape(1 1/10) time(1/8)  super(2 norm) gain(norm) 
+new synth saw note(norm 3) shape(1 1/10) time(1/8)  super(2 norm) gain(norm)
+new synth square note(norm 3) shape(1 1/10) time(1/8)  super(2 norm) gain(norm)
+new synth triangle note(norm 3) shape(1 1/10) time(1/8)  super(2 norm) gain(norm)
+
+//A beat
+new sample kick_house time(1/4) 
+
+set all fx(delay) 
