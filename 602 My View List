@@ -1,0 +1,15 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 602: View List ===
+
+//A list with palin and randomF
+list vw palin(randomF(30 0 50))
+print vw
+
+//2 polySynths
+new polySynth sine note(vw 2) time(1/16) shape(1 1/1)  steal(off) reverb(0.5 4) pan(random) 
+new polySynth triangle note(vw 1) time(1/4) shape(1 1/1)  steal(off) reverb(0.5 4) 
+
+//View the grey squares 
+view vw
