@@ -1,0 +1,26 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 603: View List RGB ===
+
+set tempo 99
+
+//3 lists 
+list rnd1 random(39212 -562 496)
+list rnd2 random(39429 -453 489)
+list rnd3 random(39405 -510 559)
+
+//View merge to visualize a lot of colored squares 
+view merge(rnd1 rnd2 rnd3)
+
+//Here I reuse my tutorial 114 "My Soundscape"
+//Press CRTL+R to randomize each speed() and each FX parameters 
+new sample chimes_chord_02 time(6) speed(0.170)
+new sample chimes_chord_01 speed(0.206)
+new sample chimes time(4) speed(0.392)
+new sample chimes_hi time(4) speed(0.225)
+new sample chimes_l time(5) speed(0.304)
+
+
+
+set all fx(degrade 0.343) fx(reverb 0.575 7) fx(delay 1/8 2/8 0.416)
