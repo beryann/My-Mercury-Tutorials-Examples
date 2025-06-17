@@ -1,0 +1,21 @@
+// By Beryann Parker 
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 604: View & Hydra ===
+// initializing an hydra source: s0.init({src: listView})
+
+set tempo 88
+
+//A random list with view()
+list cos randomF(1000 0 2000)
+view cos
+
+//An hydraVisual list with view()
+list hydraVisual ['s0.init({src: listView}.out()''src(s0).modulate(osc(10)).color(()=>time,0.6,0.9).out()' 'src(s0).modulate(src(o0),0.5).out()''src(s0).rotate(2,0.2).colorama(20).out()']
+
+//A synth and a beat 
+new synth sine note([0 3 7 10 14] 1) time(1/16) fx(delay)
+new sample kick_house time(1/4) visual(hydraVisual) play(0.4)
+new sample hat_808 time(1/16) gain(0.6)
+
+set all fx(double)
