@@ -1,0 +1,24 @@
+// By Beryann Parker
+//linktr.ee/beryann.parker
+
+// === TUTORIAL 700: Samples Freesound ===
+
+//I asked to Timo Hoogland the creator of Mercury how to load soundfiles via links from Freesound ,so you have to do this in Freesound: 
+//1) Go to the sound
+//2) Right-click on the waveform
+//3) Click "inspect"
+//4) The Elements html window opens
+//5) Search for the https://cdn.free.sound/org/something.mp3 file url
+//6) copy and paste in the Mercury editor with that syntax: 
+
+list s1 [ cello 'https://cdn.freesound.org/previews/251/251828_43-lq.mp3' ]
+list s2 [ ryt 'https://cdn.freesound.org/previews/98/98098_1644663-lq.mp3' ]
+list s3 [ ogg 'https://cdn.freesound.org/previews/33/33637_129090-lq.ogg' ]
+
+//load the sounds 
+set samples s1 s2 s3
+
+//hear them 
+new sample s1 time(1/4) speed(2) pan(random)
+new sample s2 time(1/1) fx(delay)
+new sample s3 time(1/1) gain(2)
