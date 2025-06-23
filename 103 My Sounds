@@ -20,3 +20,29 @@ new sample bell_c4 time(4)
 new sample chimes_hi time(5) gain(1.2) pan([-1 1]) //Pan in an other tutorial
 
 set all fx(double)
+
+/////////////////////////////
+
+//An other example wit the view() function 
+set tempo 83
+
+//set scale in B major 
+
+set scale major b 
+
+//5 sounds with different times
+new sample kick_909 time(3/8)
+new sample hat_909 time(1/16) fx(chorus)
+new sample snare_909 time(2/2)
+new sample tabla_hi_short play(euclid(20 7)) pan(random) time(1/8)
+new sample tom_808 timediv([1 8 1 4]) time(1/4)
+
+//2 melodies with an octave difference
+new synth sine note(pisano(20) 2) time(1/16) slide(1/64) fx(degrade)
+new synth sine note(pisano(20) 0) time(1/16) slide(1/64) gain(0.9)
+
+set all fx(reverb) 
+
+//A view() list 
+list vw repeat(random(100 0 1000)3 )
+view vw 
