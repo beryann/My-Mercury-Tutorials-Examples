@@ -15,3 +15,18 @@ new sample piano_a note([c0 c1 c2 c3]) time(2) play(0.5) //Play function in an o
 //A crazy melody 
 list mel pisano(50)
 new synth saw note(mel 3) time(1) fx(chorus)
+
+/////////////////////////
+An other crazy example for tempo with also Hydra 
+//A crazy tempo! :=()
+set tempo 1
+
+list hyd ['shape(4).rotate(0.1,0.3).colorama(()=>time/100).modulate(o0).out()']
+
+set scale dorian C 
+
+new polySynth saw note([[0 4 7 10]] 2) time(1/256) visual(hyd)
+new synth sine note([0 4 7 10] 0) time(1/128) gain(2) 
+new synth square note(pisano(24) 3) time(1/256) fx(reverb) 
+
+set all fx(chorus) 
