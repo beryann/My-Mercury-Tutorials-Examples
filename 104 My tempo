@@ -21,7 +21,7 @@ An other crazy example for tempo with also Hydra
 //A crazy tempo! :=()
 set tempo 1
 
-list hyd ['shape(4).rotate(0.1,0.3).colorama(()=>time/100).modulate(o0).posterize().out()']
+list hyd ['shape(4).rotate(0.1,0.3).colorama(()=>time/100).modulate(o0).posterize().brightness().out()']
 
 set scale dorian C 
 
