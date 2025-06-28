@@ -12,3 +12,24 @@ new sample kalimba_cis time(8 1)
 new sample kalimba_ab time(2 1)
 
 set all fx(reverb 0.5 10) play(0.6) fx(delay 1 2 0.6)
+
+////////////////////
+//A 2nd example with Hydra 
+
+//Try it out, it's cool!
+//Made with love by Beryann Parker 
+set tempo 120
+
+//Hydra with 2 visuals 
+list hyd ['shape(99).pixelate().color(1,0,0).scale(()=>Math.sin(time), ()=>Math.sin(time)).out() ''shape(99).scale(()=>Math.sin(time), ()=>Math.sin(time)).colorama().posterize().out()']
+
+//A beat with a Rhodes 
+new sample kick_min time(1/1) 
+new sample snare_909_short time(1/4 1/8) visual(hyd)
+new sample kick_nord time(1/1 1/8) 
+new sample hat_min time(1/16) gain(0.5) play(0.4)
+new sample rhodes_8bit shape(off) gain(0.8) 
+
+//And with a chorus it's better! 
+set all fx(chorus)
+
