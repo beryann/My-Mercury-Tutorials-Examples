@@ -11,4 +11,26 @@ new sample piano_e time(1/8) play(myPiano2)
 list myPiano2 [1 1 1 0 1 0 0 1]
 new sample piano_g time(1/8) play(myPiano2)
 
-set all gain(0.6) shape(1 100 10) fx(double) //gain, shape and fx(double) in an other tutorial 
+set all gain(0.6) shape(1 100 10) fx(double) //gain, shape and fx(double) in an other tutorial
+
+//////////////////////
+A 2nd example wich looks like the 1st one 
+
+set tempo 120
+
+//3 instruments 
+list myPiano [1 0 1 0 0 1 0 1]
+new sample piano_a time(1/8) play(myPiano)
+list myPluck [0 1 1 0 1 0 0 1]
+new sample pluck_a time(1/16) play(myPluck)
+list myKalimba [1 1 1 0 1 0 0 1]
+new sample kalimba_a time(1/4 1/16) play(myKalimba)
+
+set all gain(0.6) shape(1 100 10) fx(degrade) fx(reverb 0.5 3)
+
+//3 lists for view merge 
+list vw1 randomF(100 0 200)
+list vw2 spread(100 0 200)
+list vw3 drunk(100 3 0 200)
+
+view merge(vw1 vw2 vw3)
