@@ -3,7 +3,7 @@
 
 // === TUTORIAL 106: Rhythm ===
 
-//My pianos: a chord 7 (a/e/g)
+//My pianos: a chord 7 (a/e/g) 
 list myPiano [1 0 1 0 0 1 0 1]
 new sample piano_a time(1/8) play(myPiano)
 list myPiano2 [0 1 1 0 1 0 0 1]
