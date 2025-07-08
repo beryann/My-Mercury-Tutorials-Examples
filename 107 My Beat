@@ -15,3 +15,31 @@ new sample kick_808_dist time(1/16) play(disty) fx(filter) pan(-0.8) //Pan and f
 //A snary snare 
 list snary [0 1 0]
 new sample hat_909_short time(1/32) play(disty) 
+
+//////////////////
+//A 2nd example inspired byy the first one with "view" 
+
+set tempo 60
+
+set scale minor c 
+
+//A "double" melody
+list mel pisano(36)
+new synth saw note(mel 2) time(1/16) play(0.5)
+new synth saw note(mel 2) time(1/16 1/32) play(0.5)
+
+//A deep kick 
+list housy hex(a8j4)
+new sample kick_vintage time(1/4) play(housy)  pan(0.8) fx(chorus) 
+
+//A disty kick 
+list  disty coin(8)
+new sample kick_808_dist time(1/4 1/8) play(disty) fx(filter) pan(-0.8) 
+
+//A snary snare 
+list snary coin(16) 
+new sample hat_909_short time(1/32) play(snary) 
+
+set all fx(delay) 
+
+view snary
