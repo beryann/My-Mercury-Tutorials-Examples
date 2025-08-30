@@ -7,9 +7,9 @@
 set tempo 110
 
 //3 samples choir_o time
-new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) name(ch)
-new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) speed(1.5) play(0.3) gain(0.8)
-new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) speed(0.5) play(0.2) gain(1.1)
+new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) name(ch) visual(['shape(9).modulate(o0, 1).mask(solid(0.2,0.5,0.8)).colorama(20).saturate().out()'])
+new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) speed(1.5) play(0.3) gain(0.8) visual(['shape(7).modulate(o0, 1).colorama(0.2).out()'])
+new sample choir_o time(1/8) start([0.7 0.3 0.2 0.6]) shape(1 100 1) speed(0.5) play(0.2) gain(1.1) visual(['shape(3).modulate(o0, 1).pixelate().add(solid(0.1,0.8,0.4).out()'])
 set ch fx(degrade 0.4) fx(double) 
 set all play(0.4) fx(reverb)
 
