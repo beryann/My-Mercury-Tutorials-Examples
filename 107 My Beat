@@ -37,7 +37,7 @@ list  disty coin(8)
 new sample kick_808_dist time(1/4 1/8) play(disty) fx(filter) pan(-0.8) 
 
 //A snary snare 
-list snary coin(16) 
+list snary coin(160) 
 new sample hat_909_short time(1/32) play(snary) 
 
 set all fx(delay) 
