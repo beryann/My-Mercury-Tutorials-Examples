@@ -4,6 +4,9 @@
 // === TUTORIAL 107: Beat ===
 set tempo 60 //try 92 110 200
 
+//A kick
+new sample kick_909 time(1/4) fx(reverb)
+
 //A house kick 
 list housy [1 0 1 0 0 1 0]
 new sample kick_house time(1/16) play(housy) fx(delay 1/8 2/8 0.7) pan(0.8)
