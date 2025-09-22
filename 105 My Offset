@@ -33,3 +33,44 @@ new sample rhodes_8bit shape(off) gain(0.8)
 //And with a chorus it's better! 
 set all fx(chorus)
 
+/////////////////////
+//A 3d version which is a variation on the original tutorial 105: offset (with scope() and waveform()
+
+ // simple granular timestretching is achieved
+// by quickly playing short grains of a sample
+// and changing the offset of the playback
+
+//I have changed some arguments to hear something a bit different :=) 
+set tempo 100
+
+// a position ramp up-down over 100 values
+list pos sineFloat(100 1 0 0.5)
+
+// small detuning for every sample playback
+list detune randomFloat(1000 0.95 1.05)
+
+new sample bowl_mid name(grain)
+    set grain time(1/8) shape(4 350 0 4) fx(distort) gain(0.7) //I add distort to get a sort of accent on each bowl sound. Change the gain() if necessary! 
+    set grain offset(pos) pan(random)
+    set grain fx(delay 3/16 5/16 0.9)
+    set grain speed(detune)    view pos //with view it's more exciting!
+  // simple granular timestretching is achieved
+// by quickly playing short grains of a sample
+// and changing the offset of the playback
+
+//I have changed some arguments to hear something a bit different :=) 
+set tempo 100
+
+// a position ramp up-down over 100 values
+list pos sineFloat(100 1 0 0.5)
+
+// small detuning for every sample playback
+list detune randomFloat(1000 0.95 1.05)
+
+new sample bowl_mid name(grain)
+    set grain time(1/8) shape(4 350 0 4) fx(distort) gain(0.7) //I add distort to get a sort of accent on each bowl sound. Change the gain() if necessary! 
+    set grain offset(pos) pan(random)
+    set grain fx(delay 3/16 5/16 0.9)
+    set grain speed(detune)    view pos //with view it's more exciting!
+ 
+
