@@ -35,3 +35,20 @@ set all fx(reverb 0.5 3) pan(random) fx(delay)
 
 new sample kick_909 time(1) fx(shift -12 1 best) gain(2) fx(reverb 0.5 3)
 new sample tom_lo time(1 1/8) fx(shift -12 1 best) gain(2) fx(reverb 0.5 3) 
+
+////////////////////////////////////
+
+set tempo 20
+
+list td [1 2 3 4 6 8 12]
+
+new sample piano_c time(1/8) 
+new sample piano_c time(1/8)  note(7 2)  
+new sample piano_c time(1/8)  note(12 2) 
+new sample piano_c time(1/8)  note(14 2) 
+new sample piano_c time(1/8 1/16)  note(17 2) 
+new sample piano_c time(1/8 1/16)  note(19 2) play(0.8)
+new sample clap_808 time(1/4)  gain(1.2) play(0.6)
+
+
+set all timediv(td)  fx(delay) fx(converb) shape(20 20)
