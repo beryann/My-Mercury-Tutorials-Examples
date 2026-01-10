@@ -1,0 +1,16 @@
+//A beautiful meter! 
+
+set tempo 110
+list hyd ['osc(10, 0.2, 1.2).mult(osc().kaleid().rotate(3.14, -0.2)).pixelate(200).out()']
+
+//A C chord 
+new sample xylo_c4 time(1/16) play(0.6) visual(hyd)
+new sample xylo_g4 time(1/16) play(0.5) 
+new sample xylo_g5 time(1/16) play(0.4) 
+new sample violin_e time(1/16) fx(shift 12) play(0.3)  
+
+//A loop
+new loop house gain(1.1)
+
+// meter(height color). Like for waveform(), scope() or spectrum(), the second parameter is a color. Try with these colors: blue, brown,chartreuse, crimson, darkgreen (Others colors here: https://www.w3schools.com/cssref/css_colors.php)
+set all meter(90 chartreuse ) 
