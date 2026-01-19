@@ -1,0 +1,26 @@
+set tempo 110
+
+// === TUTORIAL 230: White & Pink Noise ===
+// The noise instrument allows you to create different types of noise with 2 basic noise generators, white and pink noise
+
+new noise white time(1/16) shape(1 100) play(euclid(16 11)) scope()
+
+new noise pink time(1/4) shape(1/4 1) scope()
+
+// === TUTORIAL 231: Brown & LoFi Noise ===
+// Brownian noise is like a random walk, where every new noise signal value is slightly diverging from the previous one.
+// LoFi noise sounds more like downsampled/8-bit types of noise.
+
+// both have a density() function, from 0-1
+new noise brownian time(1/16) density(0.6) scope()
+
+new noise lofi time(1/4) shape(1/4 1) density(0.7) scope()
+
+// === TUTORIAL 232: Crackle & Dust ===
+// Crackle sounds more like vinyl noise, Dust sounds more like random.Both have the density function too.
+
+new noise crackle time(1/4) shape(off) density(spreadF(16 0 0.5)) pan(1) scope()
+
+new noise dust time(1/4) shape(1/4 1) density(0.2) pan(random) spectrum(40)  
+
+set all meter(30 green)  fx(compress -60 20 30 30) play(0.1) fx(reverb)
