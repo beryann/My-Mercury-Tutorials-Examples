@@ -32,4 +32,14 @@ new sample piano_e time(1/16) play(0.1) fx(shift 12) fx(reverb 0.8 12) fx(lfo 1/
 //A house loop 
 new loop house gain(1.2)
 
+#############################################
+
+With Hydra visuals and time(free '/ASound') 
+
+new sample kick_909 fx(reverb 0.8 15) shape(10 10000) fx(vowel [ 0 1 2 3 4 5 6 7 8 9 ]) name(Kickk) visual( ['noise(2).thresh(0.5,0.3).out()' 'noise(2).thresh(0.5,0.3).modulate(o0).out()' 'noise(2).thresh(0.5,0.3).modulate(o0).colorama(0.2).out()'])
+new sample tabla_01 time(free '/Kickk') fx(delay)
+new sample hat_nord time(1/16) pan(random) fx(converb)
+
+
+
 
