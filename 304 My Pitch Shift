@@ -13,3 +13,15 @@ new sample piano_c time(1/4) fx(shift sft2 0.8 best) shape(10 500 10) pan(-1)
 new sample [kick_house snare_808] time(1/2) 
 
 print sft sft2
+
+##############################################
+
+African music box
+
+new sample kalimba_e time(1) fx(shift -12) gain(3) fx(delay)
+new sample kalimba_g time(1/3)
+new sample kalimba_cis time(1/2)
+new sample kalimba_a time(1/4)
+new sample kalimba_e fx(shift 2) time(1/8)
+
+set all play(0.4)
