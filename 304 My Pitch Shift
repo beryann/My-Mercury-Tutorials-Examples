@@ -24,4 +24,4 @@ new sample kalimba_cis time(1/2)
 new sample kalimba_a time(1/4)
 new sample kalimba_e fx(shift 2) time(1/8)
 
-set all play(0.4)
+set all play(0.4) fx(degrade 0.6)
