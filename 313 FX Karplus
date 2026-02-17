@@ -1,0 +1,21 @@
+//Inspired by the tutorial 313 FX Karplus 
+
+set tempo 10
+set scale major 
+
+list bass0 repeat([0 7 ] 3)
+// a short burst of pink noise through the karplus effect creates a dark bass-string 
+new sample harp_a2 time(1/16) fx(karplus bass0 0.9 0.5 0.8 ) 
+
+list pis pisano(32)  
+// a short burst of pink noise through the karplus effect creates a dark bass-string 
+new sample harp_a2 time(1/32)  fx(karplus pis 0.9 0.5 0.8 ) gain(4) fx(reverb)
+
+list bass1 repeat([0 7 5 10 12 ] 5)
+// a short burst of pink noise through the karplus effect creates a dark bass-string 
+new sample harp_a2 time(1/64) fx(karplus bass1 0.9 0.5 0.8 )  fx(reverb 0.6 12) 
+
+set all meter( 50 yellow) shape(50 50) 
+
+// parameters:
+// fx(karplus note feedback damping drywet)
